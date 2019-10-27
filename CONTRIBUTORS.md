@@ -58,3 +58,17 @@ Version 1.0:
 | @tobifjellner | @tobifjellner |
 | @kevIN-kovaDIA | @kevinkovadia |
 | @jarretc | @jarretc |
+| @Adhitya03 | @adhitya03 |
+| @sgomes | @sergiomdgomes |
+| @mafzal9 | @phpdocs |
+| @anace | @acalfieri |
+| @itowhid06 | @itowhid06 |
+| @luminuu | @luminuu |
+| @utsavtilava | @utsavtilava |
+| @glauberm | @glauberm |
+| @maheshwaghmare | @mahesh901122 |
+| @amolv | @amolv |
+| @Clorith | @Clorith |
+| @josephscott | @josephscott |
+| @Swapnildhanrale | @swapnild |
+| @Aurorum | @torres126 |

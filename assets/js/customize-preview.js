@@ -79,7 +79,7 @@
 					return 'opacity-' + val;
 				} );
 
-				className = classNames[ ranges.indexOf( parseInt( setting.get() ) ) ];
+				className = classNames[ ranges.indexOf( parseInt( setting.get(), 10 ) ) ];
 
 				cover.removeClass( classNames.join( ' ' ) );
 				cover.addClass( className );
@@ -94,7 +94,26 @@
 	api( 'header_footer_background_color', function( value ) {
 		value.bind( function( to ) {
 			// Add background color to header and footer wrappers.
-			$( '#site-header,#site-footer' ).css( 'background-color', to );
+			$( 'body:not(.overlay-header)#site-header, #site-footer' ).css( 'background-color', to );
+
+			// Change body classes if this is the same background-color as the content background.
+			if ( to.toLowerCase() === api( 'background_color' ).get().toLowerCase() ) {
+				$( 'body' ).addClass( 'reduced-spacing' );
+			} else {
+				$( 'body' ).removeClass( 'reduced-spacing' );
+			}
+		} );
+	} );
+
+	// Add listener for the "background_color" control.
+	api( 'background_color', function( value ) {
+		value.bind( function( to ) {
+			// Change body classes if this is the same background-color as the header/footer background.
+			if ( to.toLowerCase() === api( 'header_footer_background_color' ).get().toLowerCase() ) {
+				$( 'body' ).addClass( 'reduced-spacing' );
+			} else {
+				$( 'body' ).removeClass( 'reduced-spacing' );
+			}
 		} );
 	} );
 
